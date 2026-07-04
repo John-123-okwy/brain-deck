@@ -15,7 +15,16 @@ const firebaseConfig = {/*
   storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
   messagingSenderId:import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
-  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,*/
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  
+  
+VITE_FIREBASE_API_KEY=AIzaSyBl9eUm1CL53GFgWcMMAhf1afGqkJ0OtUk
+VITE_FIREBASE_AUTH_DOMAIN=cj-quizapp.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=cj-quizapp
+VITE_FIREBASE_STORAGE_BUCKET=cj-quizapp.firebasestorage.app
+VITE_FIREBASE_MESSAGING_SENDER_ID=909622350944
+VITE_FIREBASE_APP_ID=1:909622350944:web:978f24cbe0901977ca9f05
+VITE_FIREBASE_DATABASE_URL=https://cj-quizapp-default-rtdb.firebaseio.comg*/
   
   
   apiKey: "AIzaSyBl9eUm1CL53GFgWcMMAhf1afGqkJ0OtUk",
