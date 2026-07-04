@@ -1,0 +1,228 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 680px;
+}
+
+/* ===== PAGE HEADER ===== */
+.pageHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.headerIcon {
+  width: 48px; height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #a855f7, #6366f1);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 20px rgba(168,85,247,0.3);
+  flex-shrink: 0;
+}
+
+.pageTitle {
+  font-size: 1.5rem; font-weight: 800;
+  color: var(--text-primary); letter-spacing: -0.3px;
+}
+
+.pageSub { font-size: 0.87rem; color: var(--text-muted); margin-top: 2px; }
+
+/* ===== CARD ===== */
+.card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dangerCard {
+  border-color: rgba(248,113,113,0.2);
+  background: rgba(248,113,113,0.04);
+}
+
+/* ===== CARD HEADER ===== */
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardTitleRow {
+  display: flex; align-items: center; gap: 9px;
+}
+
+.cardIcon     { color: var(--purple-light); }
+.cardIconGold { color: #fbbf24; }
+.cardIconRed  { color: var(--error); }
+
+.cardTitle    { font-size: 0.98rem; font-weight: 700; color: var(--text-primary); }
+.cardTitleRed { color: var(--error); }
+
+/* ===== SETTING ROW ===== */
+.settingRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.settingInfo { flex: 1; }
+
+.settingLabel {
+  font-size: 0.9rem; font-weight: 600; color: var(--text-primary);
+}
+
+.settingSub {
+  font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; line-height: 1.4;
+}
+
+/* ===== TOGGLE ===== */
+.toggle {
+  width: 46px; height: 26px;
+  border-radius: 999px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  cursor: pointer;
+  position: relative;
+  transition: background 0.25s ease, border-color 0.25s ease;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.toggleOn {
+  background: linear-gradient(135deg, #a855f7, #6366f1);
+  border-color: transparent;
+}
+
+.toggleThumb {
+  position: absolute;
+  top: 3px;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* ===== PLAN ROW ===== */
+.planRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.upgradeInlineBtn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 16px; border-radius: 10px;
+  background: linear-gradient(135deg, #a855f7, #6366f1);
+  color: white; border: none;
+  font-size: 0.84rem; font-weight: 700;
+  font-family: 'Inter', sans-serif; cursor: pointer;
+  transition: all 0.2s ease; white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(168,85,247,0.35);
+}
+
+.upgradeInlineBtn:hover {
+  box-shadow: 0 6px 20px rgba(168,85,247,0.5);
+  transform: translateY(-1px);
+}
+
+/* ===== PASSWORD FORM ===== */
+.pwdForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field {
+  display: flex; flex-direction: column; gap: 6px;
+}
+
+.fieldLabel {
+  font-size: 0.84rem; font-weight: 500; color: var(--text-secondary);
+}
+
+/* ===== DANGER ZONE ===== */
+.dangerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.deleteAccountBtn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 16px; border-radius: 10px;
+  background: rgba(248,113,113,0.1);
+  color: var(--error);
+  border: 1px solid rgba(248,113,113,0.3);
+  font-size: 0.84rem; font-weight: 600;
+  font-family: 'Inter', sans-serif; cursor: pointer;
+  transition: all 0.18s ease; white-space: nowrap; flex-shrink: 0;
+}
+
+.deleteAccountBtn:hover { background: rgba(248,113,113,0.2); }
+
+.deleteConfirm {
+  display: flex; flex-direction: column; gap: 12px;
+  padding: 16px;
+  background: rgba(248,113,113,0.06);
+  border: 1px solid rgba(248,113,113,0.2);
+  border-radius: 13px;
+}
+
+.deleteConfirmText {
+  font-size: 0.87rem; color: var(--text-secondary); line-height: 1.5;
+}
+
+.deleteConfirmBtns {
+  display: flex; gap: 10px; flex-wrap: wrap;
+}
+
+.deleteConfirmBtn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 10px 18px; border-radius: 10px;
+  background: rgba(248,113,113,0.15);
+  color: var(--error);
+  border: 1px solid rgba(248,113,113,0.35);
+  font-size: 0.88rem; font-weight: 600;
+  font-family: 'Inter', sans-serif; cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.deleteConfirmBtn:hover:not(:disabled) { background: rgba(248,113,113,0.25); }
+.deleteConfirmBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ===== SUCCESS / ERROR BOXES ===== */
+.successBox {
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(52,211,153,0.1);
+  border: 1px solid rgba(52,211,153,0.3);
+  border-radius: 10px; padding: 10px 14px;
+  font-size: 0.85rem; color: var(--success);
+}
+
+.errorBox {
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(248,113,113,0.1);
+  border: 1px solid rgba(248,113,113,0.3);
+  border-radius: 10px; padding: 10px 14px;
+  font-size: 0.85rem; color: var(--error);
+}
+
+/* ===== SPINNER ===== */
+.spinner { animation: spin 0.8s linear infinite; }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .dangerRow  { flex-direction: column; align-items: flex-start; }
+  .planRow    { flex-direction: column; align-items: flex-start; }
+}

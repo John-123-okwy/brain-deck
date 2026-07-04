@@ -1,0 +1,255 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 1000px;
+}
+
+/* ===== PAGE HEADER ===== */
+.pageHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.headerIcon {
+  width: 48px; height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fbbf24, #fb923c);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 20px rgba(251,191,36,0.35);
+  flex-shrink: 0;
+}
+
+.pageTitle {
+  font-size: 1.5rem; font-weight: 800;
+  color: var(--text-primary); letter-spacing: -0.3px;
+}
+
+.pageSub { font-size: 0.87rem; color: var(--text-muted); margin-top: 2px; }
+
+/* ===== LEVEL CARD ===== */
+.levelCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 28px;
+  background: linear-gradient(135deg, rgba(251,191,36,0.1), rgba(251,146,60,0.07));
+  border: 1px solid rgba(251,191,36,0.25);
+  border-radius: 22px;
+  backdrop-filter: blur(14px);
+  position: relative;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.levelCard::before {
+  content: '';
+  position: absolute; top: 0; left: 10%; right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(251,191,36,0.6), transparent);
+}
+
+.levelLeft {
+  display: flex; align-items: center; gap: 16px; flex-shrink: 0;
+}
+
+.levelBadge {
+  width: 60px; height: 60px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #fbbf24, #fb923c);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 18px rgba(251,191,36,0.4);
+  flex-shrink: 0;
+}
+
+.levelNum {
+  font-size: 1.6rem; font-weight: 900; color: white; line-height: 1;
+}
+
+.levelTitle {
+  font-size: 1.1rem; font-weight: 800; color: var(--text-primary);
+}
+
+.levelXP {
+  font-size: 0.84rem; color: var(--text-secondary); margin-top: 3px;
+}
+
+.levelNext { color: var(--text-muted); }
+
+.levelRight {
+  flex: 1; min-width: 200px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+
+.xpBarWrap {
+  display: flex; align-items: center; gap: 10px;
+}
+
+.xpBar {
+  flex: 1; height: 8px;
+  background: var(--bg-secondary);
+  border-radius: 999px; overflow: hidden;
+  border: 1px solid var(--glass-border);
+}
+
+.xpBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, #fbbf24, #fb923c);
+  border-radius: 999px;
+}
+
+.xpPct {
+  font-size: 0.78rem; font-weight: 700;
+  color: #fbbf24; flex-shrink: 0; min-width: 32px; text-align: right;
+}
+
+.levelsRow {
+  display: flex; gap: 6px;
+}
+
+.levelPip {
+  width: 28px; height: 28px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.72rem; font-weight: 700;
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+}
+
+.levelPipDone {
+  background: linear-gradient(135deg, rgba(251,191,36,0.2), rgba(251,146,60,0.15));
+  border-color: rgba(251,191,36,0.4);
+  color: #fbbf24;
+}
+
+/* ===== FILTER TABS ===== */
+.filterRow {
+  display: flex;
+  gap: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 13px;
+  padding: 4px;
+  width: fit-content;
+}
+
+.filterBtn {
+  padding: 8px 16px; border-radius: 10px;
+  background: none; border: none;
+  color: var(--text-muted);
+  font-size: 0.84rem; font-weight: 600;
+  font-family: 'Inter', sans-serif; cursor: pointer;
+  transition: all 0.18s ease; white-space: nowrap;
+}
+
+.filterBtn:hover { color: var(--text-primary); }
+
+.filterBtnActive {
+  background: linear-gradient(135deg, rgba(168,85,247,0.18), rgba(99,102,241,0.12));
+  color: var(--purple-light) !important;
+  border: 1px solid rgba(168,85,247,0.25);
+}
+
+/* ===== ACHIEVEMENTS GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.achievementCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px 16px;
+  background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+
+.achievementCardUnlocked {
+  box-shadow: 0 4px 20px rgba(168,85,247,0.1);
+}
+
+.achievementCardLocked {
+  opacity: 0.55;
+}
+
+/* Icon */
+.achievementIcon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  display: flex; align-items: center; justify-content: center;
+}
+
+.achievementEmoji { font-size: 1.5rem; line-height: 1; }
+
+.lockIcon { color: var(--text-muted); opacity: 0.5; }
+
+/* Info */
+.achievementInfo { flex: 1; }
+
+.achievementTitle {
+  font-size: 0.92rem; font-weight: 700;
+  color: var(--text-primary); margin-bottom: 4px;
+}
+
+.achievementDesc {
+  font-size: 0.78rem; color: var(--text-muted); line-height: 1.4;
+}
+
+/* XP reward */
+.xpReward {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 4px 10px; border-radius: 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  font-size: 0.72rem; font-weight: 700;
+  color: var(--text-muted);
+  width: fit-content;
+}
+
+/* Unlocked badge */
+.unlockedBadge {
+  position: absolute;
+  top: 12px; right: 12px;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 800;
+}
+
+/* ===== ERROR ===== */
+.errorBox {
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(248,113,113,0.1);
+  border: 1px solid rgba(248,113,113,0.3);
+  border-radius: 12px; padding: 12px 16px;
+  font-size: 0.88rem; color: var(--error);
+}
+
+/* ===== LOADING ===== */
+.centerState {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  min-height: 300px; gap: 14px;
+  color: var(--text-muted); font-size: 0.9rem;
+}
+
+.spinner { animation: spin 0.8s linear infinite; color: var(--purple-light); }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+  .levelCard { flex-direction: column; }
+  .filterRow { width: 100%; justify-content: center; }
+}

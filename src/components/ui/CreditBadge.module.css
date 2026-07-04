@@ -1,0 +1,46 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  background: rgba(168,85,247,0.1);
+  border: 1px solid rgba(168,85,247,0.25);
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--purple-light);
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+}
+
+.badge:hover {
+  background: rgba(168,85,247,0.18);
+  border-color: rgba(168,85,247,0.45);
+  transform: scale(1.03);
+}
+
+.badgePro {
+  background: linear-gradient(135deg, rgba(251,191,36,0.15), rgba(251,146,60,0.1));
+  border-color: rgba(251,191,36,0.35);
+  color: #fbbf24;
+}
+
+.badgePro:hover {
+  background: linear-gradient(135deg, rgba(251,191,36,0.25), rgba(251,146,60,0.18));
+  border-color: rgba(251,191,36,0.55);
+}
+
+.badgeEmpty {
+  background: rgba(248,113,113,0.1);
+  border-color: rgba(248,113,113,0.3);
+  color: var(--error);
+}
+
+.badgeEmpty:hover {
+  background: rgba(248,113,113,0.18);
+  border-color: rgba(248,113,113,0.5);
+}
+
+.icon { flex-shrink: 0; }

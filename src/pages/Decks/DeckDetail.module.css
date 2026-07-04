@@ -1,0 +1,408 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 900px;
+}
+
+/* ===== BACK BUTTON ===== */
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.87rem;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+  width: fit-content;
+}
+
+.backBtn:hover { color: var(--purple-light); }
+
+/* ===== DECK BANNER ===== */
+.deckBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 28px 32px;
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(var(--accent, 168, 85, 247), 0.2);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.bannerStrip {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.bannerLeft {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1;
+}
+
+.bannerIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #a855f7, #6366f1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 6px 20px rgba(168,85,247,0.3);
+}
+
+.bannerSubject {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.bannerTitle {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+
+.bannerDesc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+.bannerRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.statPill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.studyNowBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: 10px;
+  border: 1px solid;
+  font-size: 0.88rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.studyNowBtn:hover { filter: brightness(1.15); transform: translateY(-1px); }
+.studyNowBtn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+/* ===== SECTION HEADER ===== */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sectionTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* ===== CARDS LIST ===== */
+.cardsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cardItem {
+  display: flex;
+  align-items: stretch;
+  gap: 14px;
+  background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 16px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cardItem:hover {
+  border-color: var(--glass-border-hover);
+  box-shadow: var(--shadow-glow);
+}
+
+.cardNumber {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.cardContent {
+  flex: 1;
+  display: flex;
+  gap: 0;
+  min-width: 0;
+}
+
+.cardSide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+  padding: 0 16px;
+}
+
+.cardSide:first-child { padding-left: 0; }
+
+.sideLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.sideText {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.55;
+  word-break: break-word;
+}
+
+.cardDivider {
+  width: 1px;
+  background: var(--glass-border);
+  flex-shrink: 0;
+  margin: 2px 0;
+}
+
+.cardActions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.actionBtn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.actionBtn:hover {
+  color: var(--purple-light);
+  border-color: var(--purple-primary);
+  background: var(--bg-card-hover);
+}
+
+.actionBtnDelete:hover {
+  color: var(--error);
+  border-color: rgba(248,113,113,0.4);
+  background: rgba(248,113,113,0.08);
+}
+
+/* ===== EMPTY STATE ===== */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 12px;
+  min-height: 340px;
+  background: var(--bg-card);
+  border: 1px dashed var(--glass-border);
+  border-radius: 24px;
+  padding: 48px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.emptyOrb {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(168,85,247,0.1), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.emptyIcon { color: var(--text-muted); opacity: 0.4; }
+.emptyTitle { font-size: 1.1rem; font-weight: 700; color: var(--text-primary); }
+.emptySub { font-size: 0.87rem; color: var(--text-muted); max-width: 280px; line-height: 1.6; }
+
+/* ===== LOADING / ERROR CENTER ===== */
+.centerState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 14px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ===== DELETE MODAL ===== */
+.backdrop {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+}
+
+.deleteModal {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; max-width: 360px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 22px;
+  padding: 30px 26px;
+  box-shadow: var(--shadow-glass), 0 24px 60px rgba(0,0,0,0.4);
+  z-index: 210;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.deleteIcon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  background: rgba(248,113,113,0.1);
+  border: 1px solid rgba(248,113,113,0.25);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 4px;
+}
+
+.deleteTitle { font-size: 1.1rem; font-weight: 700; color: var(--text-primary); }
+.deleteSub { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; }
+
+.deleteActions {
+  display: flex; gap: 10px;
+  margin-top: 8px; width: 100%;
+}
+.deleteActions button { flex: 1; }
+
+.deleteBtnConfirm {
+  flex: 1;
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  padding: 11px;
+  background: rgba(248,113,113,0.12);
+  color: var(--error);
+  border: 1px solid rgba(248,113,113,0.3);
+  border-radius: 11px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem; font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.deleteBtnConfirm:hover { background: rgba(248,113,113,0.22); }
+.deleteBtnConfirm:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.spinner { animation: spin 0.8s linear infinite; }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+@media (max-width: 640px) {
+  .deckBanner { padding: 20px 18px; }
+  .bannerRight { flex-direction: row; align-items: center; width: 100%; }
+  .cardContent { flex-direction: column; }
+  .cardDivider { width: 100%; height: 1px; margin: 8px 0; }
+  .cardSide { padding: 0; }
+}
+
+/* ===== AI + SECTION ACTIONS (Phase 9 additions) ===== */
+.sectionActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.aiBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, rgba(168,85,247,0.15), rgba(232,121,249,0.1));
+  border: 1px solid rgba(168,85,247,0.35);
+  border-radius: 12px;
+  color: var(--purple-light);
+  font-size: 0.88rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.aiBtn:hover {
+  background: linear-gradient(135deg, rgba(168,85,247,0.25), rgba(232,121,249,0.18));
+  border-color: rgba(168,85,247,0.55);
+  box-shadow: 0 0 18px rgba(168,85,247,0.25);
+  transform: translateY(-1px);
+}
+
+/* Empty state with two action buttons */
+.emptyActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

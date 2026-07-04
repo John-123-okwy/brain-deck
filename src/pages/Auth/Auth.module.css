@@ -1,0 +1,285 @@
+/**/
+
+/* ===== AUTH PAGE ===== */
+.authPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative floating orbs */
+.orb1 {
+  position: fixed;
+  top: -80px;
+  left: -80px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+  animation: floatOrb 8s ease-in-out infinite;
+}
+
+.orb2 {
+  position: fixed;
+  bottom: -100px;
+  right: -60px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+  animation: floatOrb 10s ease-in-out infinite reverse;
+}
+
+.orb3 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(232, 121, 249, 0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+@keyframes floatOrb {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-30px) scale(1.05); }
+}
+
+/* ===== AUTH CARD ===== */
+.authCard {
+  width: 100%;
+  max-width: 440px;
+  background: var(--bg-card);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 40px 36px;
+  box-shadow: var(--shadow-glass);
+  position: relative;
+  z-index: 1;
+}
+
+/* Shimmer top border */
+.authCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.6), transparent);
+  border-radius: 999px;
+}
+
+/* ===== LOGO ===== */
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  justify-content: center;
+}
+
+.logoIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #a855f7, #6366f1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(168, 85, 247, 0.4);
+}
+
+.logoText {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--text-primary);
+}
+
+/* ===== HEADINGS ===== */
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+/* ===== FORM ===== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 14px;
+  color: var(--text-muted);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.inputWithIcon {
+  padding-left: 42px !important;
+}
+
+.inputWithToggle {
+  padding-right: 44px !important;
+}
+
+/* ===== PASSWORD TOGGLE ===== */
+.eyeBtn {
+  position: absolute;
+  right: 13px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 6px;
+  transition: color 0.2s ease;
+}
+
+.eyeBtn:hover {
+  color: var(--purple-light);
+}
+
+/* ===== FORGOT PASSWORD ===== */
+.forgotBtn {
+  background: none;
+  border: none;
+  font-size: 0.82rem;
+  color: var(--purple-light);
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.forgotBtn:hover {
+  color: var(--pink-accent);
+}
+
+/* ===== SUBMIT BUTTON ===== */
+.submitBtn {
+  width: 100%;
+  padding: 14px !important;
+  margin-top: 4px;
+  font-size: 1rem !important;
+}
+
+/* ===== SPINNER ===== */
+.spinner {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ===== ERROR BOX ===== */
+.errorBox {
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.3);
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 0.87rem;
+  color: var(--error);
+  margin-bottom: 4px;
+}
+
+/* ===== SUCCESS BOX ===== */
+.successBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.successBox .title {
+  margin-bottom: 0;
+}
+
+.successBox .subtitle {
+  margin-bottom: 16px;
+}
+
+/* ===== SWITCH TEXT ===== */
+.switchText {
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+/* ===== LINK BUTTON ===== */
+.linkBtn {
+  background: none;
+  border: none;
+  color: var(--purple-light);
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.linkBtn:hover {
+  color: var(--pink-accent);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  .authCard {
+    padding: 32px 22px;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+}

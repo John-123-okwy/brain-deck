@@ -1,0 +1,725 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1100px;
+}
+
+/* ===== PAGE HEADER ===== */
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.headerIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #a855f7, #6366f1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(168,85,247,0.3);
+  flex-shrink: 0;
+}
+
+.pageTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+}
+
+.pageSub {
+  font-size: 0.87rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ===== TABS ===== */
+.tabs {
+  display: flex;
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.tab {
+  padding: 8px 18px;
+  border-radius: 9px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.87rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+}
+
+.tab:hover { color: var(--text-primary); }
+
+.tabActive {
+  background: linear-gradient(135deg, rgba(168,85,247,0.2), rgba(99,102,241,0.15));
+  color: var(--purple-light) !important;
+  border: 1px solid rgba(168,85,247,0.25);
+}
+
+/* ===== STATS GRID ===== */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.statCard {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 18px;
+  background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  transition: all 0.25s ease;
+  cursor: default;
+}
+
+.statCard:hover { box-shadow: var(--shadow-glow); }
+
+.statCard_purple { border-color: rgba(168,85,247,0.18); }
+.statCard_indigo { border-color: rgba(99,102,241,0.18);  }
+.statCard_pink   { border-color: rgba(232,121,249,0.18); }
+.statCard_gold   { border-color: rgba(251,191,36,0.18);  }
+.statCard_green  { border-color: rgba(52,211,153,0.18);  }
+.statCard_orange { border-color: rgba(251,146,60,0.18);  }
+
+.statCard_purple:hover { box-shadow: 0 0 20px rgba(168,85,247,0.18); }
+.statCard_indigo:hover { box-shadow: 0 0 20px rgba(99,102,241,0.18);  }
+.statCard_pink:hover   { box-shadow: 0 0 20px rgba(232,121,249,0.18); }
+.statCard_gold:hover   { box-shadow: 0 0 20px rgba(251,191,36,0.12);  }
+.statCard_green:hover  { box-shadow: 0 0 20px rgba(52,211,153,0.15);  }
+.statCard_orange:hover { box-shadow: 0 0 20px rgba(251,146,60,0.15);  }
+
+.statIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.statIcon_purple { background: rgba(168,85,247,0.15); color: var(--purple-light); }
+.statIcon_indigo { background: rgba(99,102,241,0.15);  color: var(--indigo-accent); }
+.statIcon_pink   { background: rgba(232,121,249,0.15); color: var(--pink-accent); }
+.statIcon_gold   { background: rgba(251,191,36,0.15);  color: #fbbf24; }
+.statIcon_green  { background: rgba(52,211,153,0.15);  color: var(--success); }
+.statIcon_orange { background: rgba(251,146,60,0.15);  color: #fb923c; }
+
+.statInfo { flex: 1; min-width: 0; }
+
+.statValue {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.statSub {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+/* ===== CHART CARD ===== */
+.chartCard {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 22px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.chartHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.chartTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.chartSub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.avgBadge {
+  background: rgba(168,85,247,0.12);
+  border: 1px solid rgba(168,85,247,0.25);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  color: var(--purple-light);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.chartWrap { width: 100%; }
+
+.chartEmpty {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 24px 0;
+}
+
+/* ===== TWO COLUMN ===== */
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* ===== SUBJECT BREAKDOWN ===== */
+.subjectList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subjectRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.subjectInfo {
+  width: 110px;
+  flex-shrink: 0;
+}
+
+.subjectName {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.subjectQuizzes {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.subjectBarWrap {
+  flex: 1;
+  height: 8px;
+  background: var(--bg-secondary);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+}
+
+.subjectBar {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.subjectPct {
+  font-size: 0.82rem;
+  font-weight: 700;
+  width: 36px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* ===== CUSTOM TOOLTIP ===== */
+.tooltip {
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-family: 'Inter', sans-serif;
+  box-shadow: var(--shadow-glass);
+}
+
+.tooltipLabel {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.tooltipValue {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+/* ===== BY DECK LIST ===== */
+.deckBreakdownList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ===== DECK CARD ===== */
+.deckCard {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.deckCard:hover {
+  border-color: var(--glass-border-hover);
+  box-shadow: var(--shadow-glow);
+}
+
+.deckCardExpanded {
+  border-color: rgba(168,85,247,0.3);
+  box-shadow: 0 0 24px rgba(168,85,247,0.12);
+}
+
+/* Top accent strip */
+.deckCardStrip {
+  height: 3px;
+  width: 100%;
+  opacity: 0.8;
+}
+
+/* ── Header row ── */
+.deckCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px 14px;
+  flex-wrap: wrap;
+}
+
+.deckCardLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.deckCardIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.deckCardTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.deckCardSub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ── Stats pills ── */
+.deckCardStats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.deckStatPill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.noQuizLabel {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ── Card actions ── */
+.deckCardActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.quizBtn {
+  padding: 7px 14px;
+  border-radius: 9px;
+  border: 1px solid;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+}
+
+.quizBtn:hover { filter: brightness(1.15); transform: translateY(-1px); }
+
+.expandBtn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.expandBtn:hover {
+  color: var(--purple-light);
+  border-color: var(--purple-primary);
+}
+
+/* ── Mastery bar ── */
+.masteryRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 20px 16px;
+}
+
+.masteryLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  width: 52px;
+  flex-shrink: 0;
+}
+
+.masteryBarWrap {
+  flex: 1;
+  height: 7px;
+  background: var(--bg-secondary);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+}
+
+.masteryBar {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.masteryPct {
+  font-size: 0.85rem;
+  font-weight: 800;
+  width: 20px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* ── Expanded section ── */
+.deckExpanded {
+  overflow: hidden;
+}
+
+.deckExpandedInner {
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border-top: 1px solid var(--glass-border);
+  padding-top: 18px;
+  margin-top: 4px;
+}
+
+/* Mini chart */
+.miniChartWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.miniChartTitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 0.3px;
+}
+
+/* Deck quiz history list */
+.deckHistoryList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.deckHistoryItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  transition: border-color 0.18s ease;
+}
+
+.deckHistoryItem:hover { border-color: var(--glass-border-hover); }
+
+.deckHistoryGrade {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 900;
+  flex-shrink: 0;
+  background: var(--bg-card);
+}
+
+.deckHistoryInfo { flex: 1; min-width: 0; }
+
+.deckHistoryDate {
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.deckHistoryTime {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+.deckHistoryRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.deckHistoryScore {
+  font-size: 0.92rem;
+  font-weight: 800;
+  min-width: 40px;
+  text-align: right;
+}
+
+/* ===== HISTORY LIST ===== */
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.historyItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  transition: all 0.2s ease;
+}
+
+.historyItem:hover {
+  border-color: var(--glass-border-hover);
+  box-shadow: var(--shadow-glow);
+}
+
+.historyGrade {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 900;
+  flex-shrink: 0;
+  background: var(--bg-secondary);
+}
+
+.historyInfo { flex: 1; min-width: 0; }
+
+.historyDeck {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.historyMeta {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.historyStats {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.historyCorrect,
+.historyWrong {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.historyScore {
+  font-size: 1.1rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  min-width: 46px;
+  text-align: right;
+}
+
+/* ===== EMPTY STATE ===== */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 12px;
+  min-height: 360px;
+  background: var(--bg-card);
+  border: 1px dashed var(--glass-border);
+  border-radius: 24px;
+  padding: 48px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.emptyOrb {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 240px; height: 240px;
+  background: radial-gradient(circle, rgba(168,85,247,0.08), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.emptyIcon  { color: var(--text-muted); opacity: 0.35; position: relative; }
+.emptyTitle { font-size: 1.1rem; font-weight: 700; color: var(--text-primary); }
+.emptySub   { font-size: 0.87rem; color: var(--text-muted); max-width: 300px; line-height: 1.6; }
+
+/* ===== ERROR ===== */
+.errorBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(248,113,113,0.1);
+  border: 1px solid rgba(248,113,113,0.3);
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  color: var(--error);
+}
+
+/* ===== LOADING ===== */
+.centerState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 14px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.spinner {
+  animation: spin 0.8s linear infinite;
+  color: var(--purple-light);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .twoCol    { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .statsGrid      { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .statValue      { font-size: 1.2rem; }
+  .pageHeader     { flex-direction: column; align-items: flex-start; }
+  .historyStats   { display: none; }
+  .deckCardStats  { display: none; }
+  .deckCardHeader { flex-wrap: wrap; }
+}
